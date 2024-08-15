@@ -1,0 +1,354 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    ::selection{
+        color: rgb(107, 25, 6);
+    }
+}
+
+
+/* start Nav section */
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: orangered;
+    /* width: 20%; */
+    height: 100%;
+    left: 0;
+    padding: 30px;
+    color: white;
+    font-size: 25px;
+    position: fixed;
+    z-index: 100;
+}
+nav .logo{
+    font-size: 35px;
+    /* width: 80%; */
+    font-weight: bold;
+}
+nav ul{
+    list-style: none;
+}
+ul li {
+    padding-bottom: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 15px;
+}
+ul li:hover{
+    background-color: white;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+ul li:hover a{
+    color: orangered;
+}
+
+/* end Nav section */
+
+/* start header section */
+.header,
+.services,
+.design,
+.packages,
+.contact{
+    display: flex;
+    flex-direction: column;
+    /* width: calc(100% - 20%); */
+    padding-left: 25px;
+    margin-bottom: 80px;
+    margin-left: 300px;
+}
+span{
+    width: 50px;
+    border-radius: 5px;
+    height: 10px;
+    background-color: orangered;
+    margin-bottom: 15px;
+}
+@media (max-width:860px) {
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+    }
+    nav .logo{
+        font-size: 25px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+    }
+    ul li {
+        padding: auto;
+    }
+    .header,
+.services,
+.design,
+.packages,
+.contact{
+    margin-left: 0;
+    margin-top: 40px;
+}
+}
+@media (max-width:819px){
+    nav{
+        font-size: 15px;
+    }
+    nav .logo{
+        font-size: 15px;
+    }
+}
+.header{
+    flex-direction: column;
+}
+.header h1:first-child{
+    font-size: 70px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    color: black;
+}
+h1{
+    font-size: 45px;
+    color: orangered;
+}
+.images img{
+    width: 500px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    opacity: .8;
+}
+.images img:hover{
+    opacity: 1;
+}
+.images{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+/* end header section */
+
+/* start services section */
+.services p{
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+/* end services section */
+
+/* start design section */
+.design p{
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.design h4{
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+.design .ima img{
+    width: 350px;
+    opacity: .9;
+}
+.design .ima{
+    display: flex;
+    flex-wrap: wrap;
+}
+.design .cards{
+    margin-left: 20px;
+    background-color: #e0dada;
+    width: 350px;
+    margin-bottom: 20px;
+}
+.design .cont{
+    padding-left: 15px;
+}
+.design .cont h2{
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 25px;
+    margin-top: 8px;
+}
+.design .cont h5{
+    font-size: 18px;
+    color: #a2a2a2;
+}
+.design .cont p{
+    font-size: 22px;
+    padding-bottom: 15px;
+}
+/* end design section */
+
+/* start packages section */
+.packages p{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.packages .packa{
+    display: flex;
+    justify-content: space-evenly;
+}
+.packages .packa .basic,
+.packages .packa .pro{
+    width: 500px;
+    background-color: #c4c1c1;
+    text-align: center;
+}
+.packages .packa .basic h1,
+.packages .packa .pro h1{
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: orangered;
+    color: white;
+}
+.packages .packa .basic h1{
+    background-color: #676767;
+}
+.packages .packa .basic h3,
+.packages .packa .pro h3
+{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgb(171, 169, 169);
+}
+.packages .packa .flex h2{
+    padding-top: 15px;
+    font-size: 35px;
+}
+.packages .packa .flex h3{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    color: #878686;
+}
+.packages .packa button{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.packages .packa .basic button {
+    background-color: #676767;
+    transition: .4s;
+}
+@media (max-width: 767px) {
+    .packages .packa .basic,
+.packages .packa .pro{
+       width: 300px;
+   }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .packages .packa .basic,
+.packages .packa .pro{
+       width: 350px;
+   }
+}
+@media (min-width: 1144px) {
+    .packages .packa .basic,
+.packages .packa .pro{
+       width: 400px;
+   }
+}
+@media (min-width: 1285px) {
+    .packages .packa .basic,
+    .packages .packa .pro{
+       width: 450px;
+   }
+}
+.packages .packa .pro button {
+    background-color: orangered;
+    transition: .4s;
+}
+.packages .packa .pro button:hover,
+.packages .packa .basic button:hover{
+    background-color: rgb(217, 233, 248);
+    transform: translatex(7px);
+} 
+/* End packages section */
+
+/* start contact section */
+.contact p{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.contact input{
+    width: 1080px;
+    height: 50px;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-color:transparent transparent orangered transparent ;
+    transition: .4s;
+}
+@media (max-width: 1285px) {
+    .contact input{
+        width: 760px;
+    }
+}
+@media (max-width: 1093px){
+    .contact input{
+        width: 700px;
+    }
+}
+@media (max-width: 1044px){
+    .contact input{
+        width: 600px;
+    }
+}
+@media (max-width: 943px){
+    .contact input{
+        width: 500px;
+    }
+}
+@media (max-width:860px){
+    .contact input{
+        width: 700px;
+    }
+}
+@media (max-width: 740px) {
+     .contact input{
+        width: 600px;
+    }
+}
+@media (max-width: 643px) {
+    .contact input{
+        width: 450px;
+    }
+}
+@media (max-width: 492px) {
+    .contact input{
+        width: 300px;
+    }
+}
+
+.contact input:hover{
+    transform: translateY(-7px);
+}
+.contact input:focus{
+    border-color: orangered;
+}
+.contact input:last-child{
+    background-color: orangered;
+}
+.contact input:last-child:hover{
+    background-color: #878686;
+}
+/* End contact section */
