@@ -8,15 +8,12 @@ body{
         color: rgb(107, 25, 6);
     }
 }
-
-
 /* start Nav section */
 nav{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background-color: orangered;
-    /* width: 20%; */
     height: 100%;
     left: 0;
     padding: 30px;
@@ -27,7 +24,7 @@ nav{
 }
 nav .logo{
     font-size: 35px;
-    /* width: 80%; */
+    padding-bottom: 30px;
     font-weight: bold;
 }
 nav ul{
@@ -49,7 +46,6 @@ ul li a{
 ul li:hover a{
     color: orangered;
 }
-
 /* end Nav section */
 
 /* start header section */
@@ -60,7 +56,6 @@ ul li:hover a{
 .contact{
     display: flex;
     flex-direction: column;
-    /* width: calc(100% - 20%); */
     padding-left: 25px;
     margin-bottom: 80px;
     margin-left: 300px;
@@ -70,10 +65,10 @@ span{
     border-radius: 5px;
     height: 10px;
     background-color: orangered;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 @media (max-width:860px) {
-    nav{
+    nav {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -82,33 +77,87 @@ span{
         width: 100%;
         height: auto;
     }
+    nav .links {
+        position: relative;
+    }
+    nav .links:hover .icon span:nth-child(2) {
+        width: 100%;
+    }
+    nav .links .icon {
+        width: 35px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    nav .links .icon span {
+        background-color: black;
+        margin-bottom: 5px;
+        height: 2px;
+    }
+    nav .links ul {
+        background-color: #f6f6f6;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        top: calc(100% + 12px);
+        display: none;
+        z-index: 1;
+    }
+    nav .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #f6f6f6 transparent;
+        position: absolute;
+        top: -20px;
+        right: 5px;
+    }
+    nav .links:hover ul {
+        display: block;
+    }
+    nav .links ul li a {
+        position: relative;
+        display: block;
+        color: #333;
+        text-decoration: none;
+        transition: 0.4s;
+        padding: 15px;
+    }
+    nav .links ul li a:hover {
+        padding-left: 28px;
+    }
+    nav .links ul li:not(:last-child) a {
+        border-bottom: 1px solid #ddd;
+    }
     ul {
         display: flex;
         align-items: center;
     }
     nav .logo{
-        font-size: 25px;
         padding-bottom: 10px;
         margin-bottom: 5px;
     }
     ul li {
-        padding: auto;
+        padding-bottom: 2px;
     }
     .header,
-.services,
-.design,
-.packages,
-.contact{
-    margin-left: 0;
-    margin-top: 40px;
-}
-}
-@media (max-width:819px){
-    nav{
-        font-size: 15px;
+    .services,
+    .design,
+    .packages,
+    .contact{
+        margin-left: 0;
+        margin-top: 40px;
+        padding-left: 15px;
     }
-    nav .logo{
-        font-size: 15px;
+    .header{
+        padding-left: 0;
+    }
+    .header h1,
+    span{
+        margin-left: 15px;
     }
 }
 .header{
@@ -129,6 +178,11 @@ h1{
     margin-left: 15px;
     margin-bottom: 15px;
     opacity: .8;
+}
+@media (max-width:520px) {
+    .images img{
+        margin-left: 0;
+    }
 }
 .images img:hover{
     opacity: 1;
@@ -250,6 +304,10 @@ flex-wrap: wrap;
     transition: .4s;
 }
 @media (max-width: 767px) {
+    .packages .packa{
+        display: flex;
+        justify-content: space-evenly;
+    }
     .packages .packa .basic,
 .packages .packa .pro{
        width: 300px;
@@ -338,7 +396,6 @@ flex-wrap: wrap;
         width: 300px;
     }
 }
-
 .contact input:hover{
     transform: translateY(-7px);
 }
